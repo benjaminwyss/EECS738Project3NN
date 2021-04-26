@@ -24,6 +24,8 @@ A neural network regressor will be able to perform the tasks of each data set si
 
 Training the neural network regressor requires weight and bias initialization followed by repeated forward and back propagation. Weight initialization is implemented by assigning each weight and bias in the network to a normally distributed random variable. Next, for a number of hyperparameter-specified iterations, the dataset's values travel through the neural network's layers by multiplying by weights, summing with biases, and applying a hyperparameter-specified activation function to the result (available options are sigmoid and ReLU), until the final output layer values are determined. From the output layer's values, the mean squared error between the calculated and expected values of the task is calculated. Using this mean squared error and the chain rule, weights and biases are updated by applying backpropagated gradient descent to determine how each weight and bias should change in value.
 
+
+
 To test the performance of the neural network, the coefficient of determination (r2 score) comparing the actual and expected values of the given task is calculated upon completing model training. K-fold cross validation using r2 score is also implemented so that a neural network can be more tested on data which it has not learned.
 
 ## Results
@@ -32,7 +34,7 @@ From testing and tuning this implementation of a neural network regressor, it ap
 
 ![Image of Model Performance Metrics'](images/output.PNG)
 
-While this performance is not impressive, it is very promising. Deeper and wider networks should be able to learn more complex taks with higher overall accuracy. Despite this, the time required to train even a small neural network is quite costly, thus I was unable to test wide and deep neural networks with my current implementation. 
+While this performance is not impressive, it is very promising. Deeper and wider networks should be able to learn more complex taks with higher overall accuracy. Despite this, the time required to train even a small neural network is quite costly, thus I was unable to test very wide and deep neural networks with my current implementation. 
 
 ## Conclusions
 
